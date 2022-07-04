@@ -9,6 +9,10 @@ Password [lists](lists)
 Additionally if using Kali, install wordlists
 ```sudo apt install wordlists```
 
+Location of wordlists on Kali
+
+``` /usr/share/wordlists/ ```
+
 ----
 
 ### RockYou.txt 
