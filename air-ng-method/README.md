@@ -49,27 +49,6 @@ This then uses aircrack-ng to process the capture file using the "rockyou.txt" w
 
 ----
 
-### MAC changer (if needed)
-
-```
-ifconfig wlan0 down
-macchanger -r wlan0
-ifconfig wlan0 up
-```
-
-See my [mac-changer repo](https://github.com/SystemJargon/mac-changer) for more info.
-
-----
-
-### sporadic-clone-ap
-
-```mdk3 wlan0 b -f ssid_list.txt  -g -a -c 6```
-
-```-c``` being channel, can not specify for mixed results.
-
-
-----
-
 David Bombal has some videos showing further how this works. Links below.
 
 [Cracking WiFi WPA2 Handshake](https://www.youtube.com/watch?v=WfYxrLaqlN8)
