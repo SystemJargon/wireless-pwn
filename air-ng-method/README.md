@@ -74,6 +74,4 @@ David Bombal has some videos showing further how this works. Links below.
 
 [Cracking WiFi WPA2 Handshake](https://www.youtube.com/watch?v=WfYxrLaqlN8)
 
-[WiFi WPA/WPA2 vs hashcat and hcxdumptool](https://www.youtube.com/watch?v=Usw0IlGbkC4)
-
 Paul from TallPaulTech (CWNE88) also explains the "4 way handshake" in this [video](https://www.youtube.com/watch?v=vHIRmG_BzQI)
