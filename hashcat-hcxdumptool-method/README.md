@@ -23,6 +23,12 @@ hashcat.exe -m 22000 hash.hc22000 -a 3 --increment --increment-min 8 --increment
 
 ----
 
-Reference:
+Convert pcap/cap format to hashcat format.
+
+```/usr/shared/hashcat-utils/cap2hccapx.bin capture.cap capture.hccapx```
+
+----
+
+References:
 
 [WiFi WPA/WPA2 vs hashcat and hcxdumptool](https://www.youtube.com/watch?v=Usw0IlGbkC4)
