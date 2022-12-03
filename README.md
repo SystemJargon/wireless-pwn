@@ -1,6 +1,6 @@
 ### Methods
 
-[Air-NG method](https://github.com/SystemJargon/wireless-pwn/tree/main/air-ng-method)
+[Air-NG method, commands to using air-ng, mdk clone, de-auth, air examples dump/mon/crack](https://github.com/SystemJargon/wireless-pwn/tree/main/air-ng-method)
 
 [Hashcat and HcxDumpTool Method](https://github.com/SystemJargon/wireless-pwn/tree/main/hashcat-hcxdumptool-method)
 
